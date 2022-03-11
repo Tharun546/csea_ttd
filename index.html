@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEA KITSW</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="logo" href="images/csea_logo.png">
+    
+</head>
+<body>
+
+<section class="w-full px-6 pb-12 antialiased bg-white">
+    <div class="mx-auto max-w-7xl">
+
+        <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
+            <div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2">
+                <div class="flex items-center justify-start w-1/4 h-full pr-4">
+                    <a href="#_" class="inline-block py-4 md:py-0">
+                        <span class="p-1 text-xl font-black leading-none text-gray-900 md:flex md:flex-row sm:flex sm:flex-row">
+                            <img width="25px" height="25px" class="mr-2" src="images/csea_logo.png">
+                            <span class="">CSEA KITSW</span>
+                            <span class="text-indigo-600">.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
+                    <div class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
+                        <a href="#_" class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="text-indigo-600">.</span></a>
+                        <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                            <a href="#homepage" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
+                            <a href="#winners" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Winners</a>
+                            <a href="#organizers" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Organizers</a>
+                            <a href="#contact" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <div id="homepage" class="container max-w-lg px-4 py-32 mx-auto text-left md:max-w-none md:text-center">
+            <h1 class="text-5xl font-extrabold leading-10 text-left text-gray-900 md:text-center sm:text-3xl md:text-5xl lg:text-6xl">
+                <span class="inline md:block">Kakatiya Institue of Technology &amp; Science, Warangal</span> 
+
+            </h1>
+            <h2 class="text-5xl mt-3 font-extrabold leading-none text-left text-gray-900 md:text-center sm:text-3xl md:text-4xl lg:text-5xl">
+                <span class="relative font-bold text-transparent bg-clip-text font-semibold bg-gradient-to-br from-indigo-600 to-indigo-500">
+                    Computer Science and Engineering Association
+                </span>
+            </h2>
+            <div class="mx-auto mt-2 text-gray-500 md:max-w-lg md:text-center lg:text-lg">
+                <p>conducted</p> 
+                <p class="relative mt-2 text-transparent bg-clip-text font-semibold bg-gradient-to-br from-indigo-600 to-indigo-500 sm:leading-none md:text-2xl lg:text-3xl">
+                    Telangana Tourism Developers Event
+                </p> 
+                <p>which is open for all branches shortlisted from around 55 members and announced winners.</p>
+            </div>
+            <div class="flex flex-col items-center mt-12 text-center">
+                <span class="relative inline-flex w-full md:w-auto">
+                    <a href="#winners" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">See Winners</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="winners" class="py-8 leading-7 text-gray-900 bg-white sm:py-12 md:py-16 lg:py-24">
+    <div class="box-border px-4 mx-auto border-solid sm:px-6 md:px-6 lg:px-8 max-w-7xl">
+        <div class="flex flex-col items-center leading-7 text-center text-gray-900 border-0 border-gray-200">
+            <h2 class="box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl">Web Developer Winners</h2>
+            <p class="box-border mt-2 text-xl text-gray-900 border-solid sm:text-2xl">for Telangana Tourism Developers Event</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 border-0 border-gray-200 sm:mt-6 sm:gap-6 md:mt-8 md:gap-0 lg:grid-cols-3">
+            
+            <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight text-black border-0 border-gray-200 sm:text-3xl md:text-4xl"></h3>
+                <div class="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
+                    <p class="box-border m-0 text-6xl font-semibold leading-none border-solid">2nd</p>
+                    <p class="box-border m-0 border-solid" style="border-image: initial;">  prize</p>
+                </div>
+                <p class="mt-6 mb-5 underline text-base leading-normal text-center text-gray-900 border-0 border-gray-200">Suryadevara Laxmi<br>B20CN029</p>
+                <ul class="flex-1 p-0 mt-4 ml-5 leading-7 text-gray-900 border-0 border-gray-200">
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Great UI
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Well Categorized
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Responsive
+                    </li>
+                </ul>
+                <button onclick="location.href='winners/lakshmi/index.html'" class="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-blue-600 no-underline bg-transparent border border-blue-600 rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg">Visit Website</button>
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0 bg-white border-4 border-blue-600 border-solid rounded-lg sm:p-6 md:px-8 md:py-16">
+                <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight text-black border-0 border-gray-200 sm:text-3xl md:text-4xl"></h3>
+                <div class="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
+                    <p class="box-border m-0 text-6xl font-semibold leading-none border-solid">1st</p>
+                    <p class="box-border m-0 border-solid" style="border-image: initial;">prize</p>
+                </div>
+                <p class="mt-6 mb-5 underline text-base leading-normal text-center text-gray-900 border-0 border-gray-200">Shivacharanchary<br>B21CS195L</p>
+                <ul class="flex-1 p-0 mt-4 leading-7 text-gray-900 border-0 border-gray-200">
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Well Categorized
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Responsive
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        CSS Animation
+                    </li>
+                </ul>
+                <button onclick="location.href='winners/shiva/homepage.html'" class="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-white no-underline bg-blue-600 border rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg">Visit Website</button>
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight text-black border-0 border-gray-200 sm:text-3xl md:text-4xl"></h3>
+                <div class="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
+                    <p class="box-border m-0 text-6xl font-semibold leading-none border-solid">3rd  </p>
+                    <p class="box-border m-0 border-solid" style="border-image: initial;">prize</p>
+                </div>
+                <p class="mt-6 mb-5 underline text-base leading-normal text-center text-gray-900 border-0 border-gray-200">V. Mukesh Kumar<br>B20CS151</p>
+                <ul class="flex-1 p-0 mt-4 leading-7 text-gray-900 border-0 border-gray-200">
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Great UI
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Responsive
+                    </li>
+                    <li class="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
+                        <svg class="w-5 h-5 mr-2 font-semibold leading-7 text-blue-600 sm:h-5 sm:w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Simple and Well Organized
+                    </li>
+                </ul>
+                <button onclick="location.href='winners/Mukesh/index.html'" class="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-blue-600 no-underline bg-transparent border border-blue-600 rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg">Visit Website</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="organizers" class="relative py-20 overflow-hidden bg-white">
+    <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
+        <span class="container hidden w-screen h-32 max-w-xs mt-20 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-blue-50"></span>
+    </span>
+
+    <span class="absolute bottom-0 left-0"> </span>
+
+    <div class="relative px-16 mx-auto max-w-7xl">
+        <h2 class="relative max-w-lg mt-5 mb-10 text-4xl font-semibold leading-tight lg:text-5xl">An incredible team of <br>this event</h2>
+        <div class="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-3">
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-full rounded-full" src="images/srinivas.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>Dr.C.Srinivas</h3>
+                        <p class="text-blue-600">CSE, Head of Department</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-50 rounded-full" src="images/santhosh.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>N.C.Santosh kumar</h3>
+                        <p class="text-blue-600">Faculty Coordinator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-full rounded-full" src="images/preeti.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>M.PREETHI</h3>
+                        <p class="text-blue-600">Faculty Coordinator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-full rounded-full" src="images/vishnu.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>K.Vishnu</h3>
+                        <p class="text-blue-600">CSEA President</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-full rounded-full" src="images/koushik.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>N.Sai Koushik</h3>
+                        <p class="text-blue-600">Vice President</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center col-span-1">
+                <div class="relative p-5">
+                    <img class="relative z-20 w-full rounded-full" src="images/tharun.png">
+                </div>
+                <div class="mt-3 space-y-2 text-center">
+                    <div class="space-y-1 text-lg font-medium leading-6">
+                        <h3>P.Tharun</h3>
+                        <p class="text-blue-600">Joint Secretary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <div class="flex justify-center mt-8 space-x-6">
+            <a href="https://www.instagram.com/cse_kitsw" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="mailto:csea@kitsw.ac.in" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Mail to</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 512 512">
+                    <path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"/>
+                </svg>
+            </a>
+        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">© 2022 CSEA KITSW. All rights reserved.</p>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+
+</body>
+</html>
