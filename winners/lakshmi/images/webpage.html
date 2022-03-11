@@ -1,0 +1,561 @@
+<html>
+<head>
+<style>
+h1::first-letter{
+font-size:200%;
+color:#8A2BE2;
+}
+.imagecolumn{
+float:left;
+width:20%;
+padding:30px;
+}
+
+
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+} 
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+input:in-range{
+border:2px solid yellow;
+}
+meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color:#f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+ html {
+  height: 100%;
+  margin: 0;
+  font-family: Times New Roman;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.3%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color:#FFA07A;}
+#About {background-color:white;}
+#Transport {background-color:#C1E1C1;}
+</style>
+</head>
+<body>
+
+
+<div style="border:0px solid #EEE;">
+<h3><marquee>TTD-TELANGANA TOURISM DEVELOPERS coducted by CSE Association</marquee></h3>
+</div>
+<h1 style="text-align:center;background-color:#ADD8E6;font-family:comic sans;">TELANGANA TOURISM</h1>
+<hr>
+
+<button class="tablink" onclick="openPage('Home', this, '#FFA07A')">Home</button>
+<button class="tablink" onclick="openPage('About', this, 'white')" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Transport', this, '#C1E1C1')">Transport</button>
+
+<div id="Home" class="tabcontent">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="hyderabad_tourist_places_map.jpg" style="width:100%;height:115%;">
+  <div class="text">Telangana tourism places</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="1521625890_cp.jpg" style="width:100%;height:110%;">
+  <div class="text">Hyderabad</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="Telangana-cover_16th-Dec.jpg" style="width:100%;height:110%;">
+  <div class="text">hussainsagar</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<img src="patt.jpg" width=300 height=300 align="right">
+<img src="charminar-2.jpg" width=300 height=300 align="right">
+  <p style="font-size:30px;font-family:Arial;"><h1>Hyderabad</h1><br><h3 style="color:green;font-size:40px;">Hyderabad Tourism</h3> <br>"The City of Nizams" 
+A city of contrasts, Hyderabad exudes an old-world charm of its own with the Old City (Charminar side), Hitech City (Cyberabad) and the other areas lying between the old and the new. The capital and the largest city of Telanaga, Hyderabad is home to stately mosques and noisy bazaars lined parallelly alongside swanky new office buildings and malls, and it is these very contrasts  these glimpses into the city is rich past with inherent promises of an even better future –that make Hyderabad a city worth visiting. Maybe even more than once.<br>
+
+The city of pearls and biryani, Hyderabad is home to one of the most iconic landmarks - the Charminar. Translating to 'four minarets', the grand edifice is built entirely out of limestone and granite, with four minarets on four sides, each of them facing a different street. The Charminar stands in a labyrinth of lanes crammed with shops, markets, stalls and shoppers - one of the best places to shop for the authentic pearls and relish the tasty biryanis, skewer kebabs and haleem (the smorgasbord of food that Hyderabad is known for).<br> 
+
+The other side of Hyderabad - HiTech City or Cyberabad - is a stark contrast to the Old City. The area teems with grand malls, pulsating clubs, sleek restaurants and hi-rise buildings of the every-growing multinationals. Between the old and new lie the popular city areas of Banjara Hills and Jubilee Hills flanked on the northeast by Secunderabad. Hyderabad and Secunderabad together are still referred to as the "twin cities", though they are practically one now. <br>
+
+Hyderabad pulsates with a spectacular mix of people and traditions. Make a journey through this mind-stirring metropolis and be ready to be amazed, frustrated, confounded and thrilled, all at once!<br>
+</p><br> <br><br><br><br><br><br>
+
+<h3>Must Visit Places in Hyderabad</h3>
+<p class="alignrow">
+<div class="imageColumn">
+<img src="Ramoji-Film-City.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/aclk?sa=l&ai=DChcSEwjhv4PzkJ72AhW8mmYCHWr6CSIYABAAGgJzbQ&sig=AOD64_0jUAPd25ih9rYEBVgqHh1uYNtAqg&ved=2ahUKEwjf4vvykJ72AhVokNgFHWzKCJoQ0Qx6BAgNEAE&adurl" align="miidle">Ramoji Film City</a></p>
+</div>
+<div class="imageColumn">
+<img src="1599px-The_Charminar_on_a_cloudy_day.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p style="text-align=left;"><a href="http://www.google.com/url?q=https://www.britannica.com/topic/Charminar&sa=U&ved=2ahUKEwigx_zrnZ72AhVBTmwGHcaPBuQQFnoECAIQAg&usg=AOvVaw07i__B8B5K-Sv9gFL3jfxE">Charminar</a></p>
+</div>
+<div class="imageColumn">
+<img src="Hussain-Sagar-Lake-730x410.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p style="text-align=left;"><a href="http://www.google.com/url?q=https://www.telanganatourism.gov.in/partials/destinations/nature-discovery/hyderabad/hussain-sagar-lake.html&sa=U&ved=2ahUKEwjkjZLAn572AhXYR2wGHYuJB-EQFnoECAoQAg&usg=AOvVaw0kxWLKREqmqsd7tkm2TLrR">Hussain Sagar Lake</a></p>
+</div>
+<div class="imageColumn">
+<img src="Golconda-Fort-730x410.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p style="text-align=left;"><a href="http://www.google.com/url?q=https://www.hyderabadtourism.travel/golconda-fort-hyderabad&sa=U&ved=2ahUKEwjjq6GLmp72AhV3SWwGHZWHDW0QtwJ6BAgJEAE&usg=AOvVaw36_uH-GtYW3rP3xoZhUGIM">Golconda Fort</a></p><br> 
+</div>
+<div class="imageColumn">
+<img src="1024px-Birla_Mandir_in_Hyderabad,_2015.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p style="text-align=left;"><a href="http://www.google.com/url?q=https://www.hyderabadtourism.travel/birla-mandir-hyderabad&sa=U&ved=2ahUKEwjLjo78sqT2AhVlD7kGHYD4BO8QFnoECAsQAg&usg=AOvVaw10qEjpikcTbJTVA2qj4zJH">Birla Mandir</a></p>
+<br>
+</div>
+</p>
+</p>
+<h2>Related Videos</h2>
+<br><br>
+<p style="background-color:powderblue;">
+<iframe width="400" height="300" src="https://www.youtube.com/embed/YsxlG9QvXXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/__tOoiMU0_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="460" height="315" src="https://www.youtube.com/embed/3F6zgxqv36c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<br>
+<h1>Papikondalu</h1>
+<img src="http://2.bp.blogspot.com/-4ST0IjRt6Uo/U7undoYdjvI/AAAAAAAAAWs/A33_HTRde_U/s1600/DSC04984.JPG.jpg" width=300 height=300 align="right"/>
+  <p style="font-size:30px;font-family:Arial;"><h3 style="color:green;font-size:40px;">Papikondalu Tourism</h3> <br>The entrance of Papi kondalu can be seen from Koruturu (West Godavari District).The original name for this hill range was ‘Papidi Kondalu’. Papidi is a rough translation for partition in Telugu. Since this range looks like a well designed partition that splits river Godavari, this name was coined. There is also another idea that the range looks like a partition of a typical Indian Woman’s hair line. In due course, it settled for ‘Papi Kondalu’.Papikondalu Andhra Pradesh – “Papi kondalu” or the “Papi Hills” are series of mountain range that are located Rajahmundry in West Godavari District of Andhra Pradesh. Papikondalu Mountain range runs along River Godavari, one of the largest and vivacious rivers in India.<br> The mighty river narrowing and
+passing with twists and turns along the Papi Hills is every visitor’s delight. Papikondalu mountain range spreads over a vast area, covering about three districts of East Godavari, West Godavari and Khammam Districts.To get the real essence of Papikondalu, one has to go for the boat journey either from Rajahmundry,Bhadachalamr. There are small motor boats with capacity of five including the rider or River Streamers carrying about fifty to sixty people. The journey takes about 8 hours and the adventure begins the moment you step on to the boat.<br> The ups and downs of the river water, the drifting sand, the cool breeze, small fish that can be spotted in the clean water and the fresh air from the Papikondalu Hills, give you one of the best experiences to travel.Come any season except summer, these hill ranges offer one of the best places to visit in AP in terms of scenic beauty animals, , bird species, which are found here.The flooding river (especially during rainy season- July to September) gives you a thrilling experience to travel. Sometimes the increased water level in the river makes the boat journey precarious. It is the skill and experience of the local sailors, who makes your journey most memorable.There are several sights that fall on the way like Perantalapalli and Pattiseema that are must-see. Several tribal communities have made their dwellings on these hills whose main occupation is agriculture, fishing or handicrafts-making. If you are a real adventure lover with a group of more than five and not with elderly people, one of the fascinating things you can do is camp at the river side overnight.</p><br> <br><br><br><br><br><br>
+<h3>Places To Visit In PapiKondalu </h3>
+<p class="alignrow">
+<div class="imageColumn">
+<img src="papikondalu-hills-package-500x500.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/aclk?sa=l&ai=DChcSEwj-pL6-76T2AhUbGK0GHbblAR8YABAAGgJwdg&sig=AOD64_03ybIjSd-D_7PIcq7R3-oKbL5U3w&ved=2ahUKEwi2sLW-76T2AhXiJUQIHZzwCXcQ0Qx6BAgNEAE&adurl" align="miidle">Papi Kondalu Hills</a></p>
+</div>
+<div class="imageColumn">
+<img src="gandi-posamma-temple.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://papikondalu-tour-package.com/temples-around-rajahmundry/gandi-pochamma-temple.php&sa=U&ved=2ahUKEwjqhfa48aT2AhVyJkQIHWxFD1YQFnoECAIQAg&usg=AOvVaw35R4Yfp5IrpZoDbZXG8i-s" align="miidle">Gandi Pochamma Temple</a></p>
+</div>
+<div class="imageColumn">
+<img src="perantapalli-tour-500x500.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://www.holidify.com/places/papi-kondalu/perantapalli-village-sightseeing-5586.html&sa=U&ved=2ahUKEwic8Zip9KT2AhW5yDgGHS2tCb4QFXoECAQQBA&usg=AOvVaw18BX1whK8xw541YwSlsnCe" align="miidle">Perantapalli Village</a></p>
+</div>
+<div class="imageColumn">
+<img src="Sri-Venkateshwara-Swamy-Temple-in-Jamalapuram.jpg" width=300 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://en.wikipedia.org/wiki/Jamalapuram_Temple&sa=U&ved=2ahUKEwj5rObJ9aT2AhXVJEQIHbTUA54QFnoECAEQAg&usg=AOvVaw25yj2dCC6udhwA-XIUvf4V" align="miidle">Jammalapuram Temple</a></p>
+</div>
+<div class="imageColumn">
+<img src="o1AJ9qDyyJNSpZWhUgGYc3MngFqoAMyToDc11S5SxN9dsw9HQ-870x555.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://en.wikipedia.org/wiki/Papikonda_National_Park&sa=U&ved=2ahUKEwi3rYKs9qT2AhVaJ0QIHQI5CEAQFnoECAwQAg&usg=AOvVaw1kRv-HZpbFX8QT_6dMGVmC">Papikondalu National Park</a></p>
+</div>
+</p>
+</p>
+<h2>Related Videos</h2>
+<br><br>
+<p style="background-color:powderblue;">
+<iframe width="560" height="300" src="https://www.youtube.com/embed/LoXCYZb-JPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="300" src="https://www.youtube.com/embed/HGKDBgvqVO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<br>
+<h1>Warangal</h1>
+<img src="250px-WarangalMontage.jpg" width=300 height=400 align="right"/>
+  <p style="font-size:30px;font-family:Arial;"><h3 style="color:green;font-size:40px;">Warangal Tourism</h3> <br>Originally known as Orugallu which means ‘one stone’, Warangal was ruled by the Kakatiya dynasty. It is believed that the entire town was carved out on a single rock. The Kakatiyas built many monuments in the state which include iconic fortresses, gateways and temples. Among the most famous monuments of Telangana, the Thousand Pillar Temple in Hanamkonda, was built by the Kakatiya King Rudra Deva in 1163 AD in Chalukyan style of temple architecture. The city of Warangal was also described in detail by Marco Polo during his visit to the country. The city of Warangal is well connected by road as well as rail. The city is a cluster of three towns and is popular for many attractions. While visiting Warangal, one should definitely stop by the beautiful Khush Mahal located near the Warangal Fort. The symbol of a glorious past, it is a masterpiece built by Shitabh Khan.<br>
+Warangal is a city in the south Indian state of Telangana. It was the capital of the Kakatiya dynasty from the 12th to 14th centuries, and many intricately carved monuments from this period still stand. Among them are the ruins of 13th-century Warangal Fort and the Thousand Pillar Temple, built in 1163. Set on a lake, Bhadrakali Temple dates to the 7th century and is dedicated to the Hindu goddess Kali.<br>Warangal is the fifth largest city of the state and a very important tourist place with an enchanting architectural work which attracts many people from different parts of the world. The famous tourist places in Warangal are—thousand pillared temple (built by the Kakatiyas and it is dedicated to Lord Shiva, Lord Vishnu and Lord Surya); the Bhadrakali temple (dedicated to Goddess Bhadrakali); Ramappa temple (where Lord Shiva is worshipped). Some other monuments of Warangal include Warangal Fort, a historical monument which dates back to the 13th Century and Ghanpur group of temples. <br>Recognized as one of the best heritage cities of India, Warangal is situated 145 km away from Hyderabad in Telangana state. The fifth largest city in the state, its name is derived from the word Orugallu: Oru, which means one and Kallu means stone. The city was also known as Ekasila Nagaram.
+Warangal was the capital of the Kakatiya kingdom which ruled between 12th and 14th century. Prola Raja of Kakatiya is credited with built the town in the 12th century. The Kakatiyas, who ruled for more than 200 years, have left many grand monuments and architectural marvels like the famous Warangal Fort, Swayambhu Temple and many other ancient structures. In February 2013, Warangal was accorded World Heritage city status by UNESCO. Government of India’s Tourism Ministry also recognized the city as the Best Heritage City along with Jaipur.
+With several temples known for their outstanding architecture and splendid history, known for their granite quarries made of blue granite, Warangal attracts many tourists. Warangal Fort, spread over a radius of 19 km between Warangal and Hanamkonda is literally and metaphorically the biggest attraction of the city . Constructed in the 13th century during the reign of King Ganapati Deva, the fort is most famous for its intricately carved arches and pillars and four large stone gateways.<h3>Places To Visit In PapiKondalu </h3>
+<p class="alignrow">
+<div class="imageColumn">
+<img src="373px-Warangal_fort.jpg" width=300 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://en.wikipedia.org/wiki/Warangal_Fort&sa=U&ved=2ahUKEwj1q7eSiqX2AhVKRmwGHX5vAv4QFnoECAsQAg&usg=AOvVaw1ie7LpXmGBtS4KJocpbOPT" align="miidle">Warangal Fort</a></p>
+</div>
+<div class="imageColumn">
+<img src="Thousand_pillar_temple_warangal_by_ram_prasad_nalacheruvu-768x557.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://hanumakonda.telangana.gov.in/tourist-place/thousand-pillar-temple/&sa=U&ved=2ahUKEwjUsaK2jKX2AhWkzjgGHWC3DaMQFnoECAkQAg&usg=AOvVaw1BtuBjd0CMr-eTG1yroL9N" align="miidle">Thousand Pillar Temple</div>
+<div class="imageColumn">
+<img src="220px-Ramappa_Temple_(Human_Scale).jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://warangaltourism.in/ramappa-temple-warangal&sa=U&ved=2ahUKEwizw4aTj6X2AhWoyTgGHSVCALIQFnoECAcQAg&usg=AOvVaw069oadHFBT2tdbdj3JsRgr" align="miidle">Ramappa Temple</a></p>
+</div>
+<div class="imageColumn">
+<img src="bhadrakali-temple-warangal-tourism-entry-fee-timings-holidays-reviews-header.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://warangaltourism.in/bhadrakali-temple-warangal&sa=U&ved=2ahUKEwi-4p3Pj6X2AhWZyzgGHX6XAkMQFnoECAkQAg&usg=AOvVaw16T2rXvMzkjevSiXuRQxbH" align="miidle">Bhadrakali Temple</a></p>
+</div>
+<div class="imageColumn">
+<img src="View_of_Laknavaram_lake,_from_suspension_bridge.jpg" width=250 height=300 align="left"/><br><br><br><br><br><br><br><br><br><br><br>
+<p><a href="http://www.google.com/url?q=https://mulugu.telangana.gov.in/tourist-place/laknavaram-lake/&sa=U&ved=2ahUKEwilxv66kKX2AhVH4zgGHUA7CpgQFnoECAgQAg&usg=AOvVaw23x21VuUz8ZqOs3luo_jy3" align="miidle">Laknavaram Lake</a></p>
+</div>
+</p>
+</p>
+<h2>Related Videos</h2>
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WzDiMuxOZpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D-Xlu_EKN5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+<div id="About" class="tabcontent">
+
+  <h2>Telangana Tourism</h2>
+  <p>Telangana is located in the southern part of India and is renowned for its natural attractions, temples, palaces, forts and other heritage sites. The rich cultural heritage of the state makes it one of the most visited tourist destinations in South India.<br>
+According to the Telangana State Tourism Development Corporation, about 92.8 million and 0.318 million domestic and international tourists, respectively, visited the state in 2018. This tourist-friendly state has a large number of big and small accommodation options including budget, luxury and heritage hotels, homestays and resorts.
+<h3>History of Telangana</h3>
+<img src="275px-Montage_of_Telangana_State.jpg" width="300" height="300">
+Telangana’s history has been shaped by many great dynasties like the Mauryas, Satvahanas, Chalukyas and Kakatiyas. The region came under the dominion of the Delhi Sultanate in the 14th century, Bahmani Sultanate in the 15th century and Qutb Shahis in the 16th century. The Qutb Shahi kingdom fell into the hands of the Mughal emperor, Aurangzeb in 1687.
+In 1712, Qamar-ud-din Khan became the administrator (Nizam-ul-Mulk) of the region. Later, he took the name Asaf Jah, laying the foundation of what came to be known as the Asaf Jahi dynasty. He named the region, Hyderabad Deccan, and his lineage came to be known as the Nizams of Hyderabad. When the colonial powers established their control over the country, the Nizams obtained their support and kept ruling Hyderabad under their protection.
+After India’s freedom, the then Nizam wanted Hyderabad State to remain independent. But the Indian Government annexed it in 1948 with ‘Operation Polo’. In 1956, Telangana region was combined with Andhra State to form Andhra Pradesh. In the years that followed, there were many major movements to revoke the merger. Consequently, the state of Telangana was officially formed from the northwest part of Andhra Pradesh on 2nd June, 2014.<br>
+Telangana shares its border with Chhattisgarh in the east, Andhra Pradesh in the south and east, Karnataka in the west, and Maharashtra in the north. Located on the Deccan Plateau, the state’s landscape is dotted with mountain ranges, hills, and dense forests. Krishna and Godavari are the two major rivers flowing through the state.
+The climate of Telangana is hot and dry. Summers are scorching hot while winters are mild and dry. The best time to visit Telangana is between September and March.<br>
+Iconic Monuments: Charminar, Qutub Shahi Tombs, Paigah Tombs, Kakatiya Kala Thoranam<br>
+<h4>Temples:</h4> Jagannath Temple, Kolanupaka Jain Temple, Thousand Pillar Temple, Sita Ramachandraswamy Temple, Ramappa Temple<br>
+<h4>Mosques:</h4> Mecca Masjid, Toli Masjid, Spanish Mosque, Badapahad Dargah<br>
+<h4>Churches:</h4> Joseph’s Cathedral, George’s Church, Centenary Methodist Church, All Saints Church, Medak Church<br>
+<h4>Forts:</h4> Golconda Fort, Bhongir Fort, Warangal Fort, Elgandal Fort, Khammam Fort, Devarakonda Fort, Jagtial Fort<br>
+<h4>Palaces:</h4> Chowmahalla Palace, Hill Fort Palace, Falaknuma Palace, King Kothi Palace, Jubilee Hall, Purani Haveli<br>
+<h4>Lakes:</h4> Hussain Sagar Lake, Osman Sagar Lake, Durgam Cheruvu, Laknavaram Lake, Pakhal Lake<br>
+<h4>Waterfalls:</h4> Kuntala Waterfalls, Mallela Theertham, Bheemuni Paadam Waterfalls, Gayatri Waterfalls, Kanakai Waterfalls<br>
+<h4>Wildlife Sanctuaries and National Parks:</h4> Mrugavani National Park, Eturnagaram Wildlife Sanctuary, Kawal Tiger Reserve, Kinnerasani Wildlife Sanctuary<br>
+<h4>Museums:</h4> Salar Jung Museum, Telangana State Archaeology Museum, BM Birla Science Museum, Heritage Jail Museum, Sudha Cars Museum<br>
+<h4>Other Attractions:</h4> Ramoji Film City, Wonderla, Manjeera Dam, Ananthagiri Hills<br>
+<h2 style="color:green;">Telangana Cuisine</h2>
+<img src="food.jpg" width="550" height="500" class="center">
+<p>The cuisine of Telangana includes both vegetarian and non-vegetarian dishes. Some of the famous dishes of Telangana are Sarva Pindi, Pachi Pulusu, Golichina Mamsam, Hyderabadi Biryani, Sakinalu, Haleem, and Gongura Chutney. Malidalu, Garijalu, Qubani ka Meetha, Ariselu, and Kobbari Pappu Payasam are some must-try traditional desserts.<br>
+Telangana Cuisine is typically spicy and ingredients such as tamarind, sesame seeds, red chillies and asafoetida are widely used in a variety of vegetarian and non-vegetarian dishes. Roselle is a staple item used in making curries and pickles. Sources state that while in Telangana, millet bread/roti is a staple diet its neighbouring state of Andhra prefers rice. Hyderabad is the shared capital of Andhra Pradesh and Telangana and is obviously wildly popular for its biryanis and Karachi biscuits. But there is so much more to Telangana Food that many of us are completely unaware of.
+So here is a list of some of the Telangana famous food:<br>
+<p class="alignrow">
+<div class="imageColumn">
+<img src="Sarvapindi__mango_pickle_-_aavakai.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Sarva Pindi</P>
+</div><br>
+<div class="imageColumn">
+<img src="Malida-e1475877317194.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Malida</P>
+</div>
+<div class="imageColumn">
+<img src="chakinalu.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>chakinalu</P>
+</div>
+<div class="imageColumn">
+<img src="Garijalu.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Garijalu</P>
+</div>
+<div class="imageColumn">
+<img src="pachi_pulusu.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Pachi Pulusu</P>
+</div>
+<div class="imageColumn">
+<img src="Golichina-Mamsam.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Golichina Mamsam</P>
+</div>
+<div class="imageColumn">
+<img src="HyderabadiChickenBiryaniYT161123910435.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>HyderabadiChickenBiryani</P>
+</div>
+<div class="imageColumn">
+<img src="chegodilu.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Chegodilu</P>
+</div>
+<div class="imageColumn">
+<img src="Polelu.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Polelu</P>
+</div>
+<div class="imageColumn">
+<img src="Qubani-ka-Meetha.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Qubani ka Meetha</P>
+</div>
+</p>
+<h3 style="color:green;">Shopping in Telangana</h3>
+<img src="shopping.jpg" width="600" height="500" class="centre">
+<p><h4>Telangana has a lot of interesting things you can carry back as souvenirs including:<h4><br>
+<div class="imageColumn">
+<img src="Hyderabadi pearls.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Hyderabadi pearls</P>
+</div>
+<div class="imageColumn">
+<img src="Lac bangles.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Lac bangles</P>
+</div>
+<div class="imageColumn">
+<img src="Items with bidri work.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Items with bidri work</P>
+</div>
+<div class="imageColumn">
+<img src="Pochampally sari.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Pochampally sari</P>
+</div>
+<div class="imageColumn">
+<img src="Fabric with kalamkari work.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Fabric with kalamkari work</P>
+</div>
+<div class="imageColumn">
+<img src="Osmania biscuit.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Osmania biscuit</P>
+</div>
+<div class="imageColumn">
+<img src="Paper sweet.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Paper sweet</P>
+</div>
+<div class="imageColumn">
+<img src="Mangoes.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Mangoes</P>
+</div>
+<div class="imageColumn">
+<img src="Ittar.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Ittar/Attar</P>
+</div>
+<div class="imageColumn">
+<img src="haleem.jpg" width=250 height=250 align="left"><br><br><br><br><br><br><br><br>
+<p>Haleem</P>
+</div>
+</p><br><br><br><br><br><br><br><br>
+<h3 style="color:green;text-align:centre;">RELATED VIDEOS</h3>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/d0ttbdHKuG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/NEWNctGHxJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/pCYD4gRMnjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/ScuEcHbfYI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/Zv8uHQ157oA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>TELANGANA LOCATION<h2>
+
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.windows.com/?form=WNAMSH&entity=sid%3A19abdc7d-29ea-4ed5-99d8-3a1d7bc90b05&collection=point.17.800676_79.009628_Telangana"
+      async
+    ></script>
+<p><a href="https://maps.windows.com/?form=WNAMSH&entity=sid%3A19abdc7d-29ea-4ed5-99d8-3a1d7bc90b05&collection=point.17.800676_79.009628_Telangana">telangana</a>
+
+</div>
+
+<div id="Transport" class="tabcontent">
+  <h1 style="text-align:center;color:red;">Transport</h1>
+  <p>The Transport Department of Telangana is set up for enforcement of the provisions of the Motor Vehicle Act, 1988 and Telangana Motor Vehicles Taxation Act, 1963 and the rules under it. Though Telangana has a good rail and air transport system, yet road transport is the most important one. It helps the people especially in rural areas to travel from one place to another with much ease.
+
+The Transport Department of Telangana is controlled by the Transport Commissioner who is the Head of the Transport Department and is helped by an Additional Commissioner and four Joint Commissioners, three Regional Transport Officers and one Regional Transport officer 
+</p>
+<img src="telanganamap.jpg" width="400" height="400" class="center">
+<img src="railway.jpg" width="400" height="400" class="center">
+<img src="Airway.jpg" width="400" height="400" class="center">
+<h3>Transport Commissioner</h3>
+<p>Office: 23321279 <br>
+Email: tc@tstransport.in<br>
+<a href="https://www.transport.telangana.gov.in/"target="_blank"><h3>Website:</h3>https://www.transport.telangana.gov.in/</a> 
+<h2>Roadways in Telangana</h2>
+<p>Six national highways run through the state of Telangana making commuting between cities an easy affair.NH7 is the longest national highway in Telangana that enters the state from Adilabad in the north and goes till Mahbubnagar before exiting the state on its South. Nizamabad, Medak, Rangareddy and Hyderabad are the other important districts that NH7 crosses. The other important highways present in the state include NH16 that passes through Adilabad, Karimnagar and Nizamabad and NH9 passing through Nalgonda, Hyderabad and Medak. NH202 stretches from Hyderabad to Warangal. NH221 is another important national highway that passes through Khammam.</p>
+<h2>Railways in Telangana</h2>
+<p>The districts of Telangana are well connected by rail route that run all across the state. It not only has a well developed inter-state but also intra-state rail route. Since the state was earlier part of Andhra Pradesh, the major cities of Telangana are already connected with the important cities of India.</p>
+<h2>Airports in Telangana</h2>
+<p>Transportation is an important facet for the development of any place. While the transportation facilities in Telangana as far as road transport is concerned, is being taken care of by Telangana State Road Transport Corporation buses as well as APSRTC (Andhra Pradesh State Road Transport Corporation) buses, air transport needs a careful revamping in the days to come. The government has come up with new and innovative plans which will connect Telangana with neighbouring states and places abroad in a much better way.<br>
+Going by what the aviation experts proclaim, since it is not feasible to have more large airports in Telangana too soon, it might be a good idea to look forward for a small airport every few hundred kilometres which seems possible and is a public requirement too. This would improve connectivity and aid in investment and development even in remote areas of this newly formed state.  
+
+International airports require minimum of 9,000 metres of runway. There are around 16 airstrips in Andhra Pradesh and Telangana - some functional while others redundant.
+
+</p>
+
+<h2 style="text-align:right;">Done by:<br>Name:Suryadevara Laxmi<br>
+Roll Number:B20CN029</h2>
+
+
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
